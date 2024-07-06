@@ -1,25 +1,36 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import {m,LazyMotion} from 'framer-motion'
+
+const loadFeatures = () =>
+    import("@/lib/features").then(res => res.default)
+  
+  
 
 const SideBar  = ({
     children,
-    className,
-    
-    
+    callBack,
+    style,
+    className
     })=>
     {
-  const [ isOpen ,setIsOpen ] =useState(false)  
         const SideBarhandler = ()=>{}
-   
-     return (
-        <aside
-          style={{width : isOpen? "100px":"50"}}
-            className={className}
 
+     return (
+        <LazyMotion features={loadFeatures}>
+        <m.aside
+        className={className?className:null}
+        style={style?style:null}
+
+        animate={{
+                x:[-100,0],
+               
+            
+            }}
+            transition={{duration:1}}
         >
         {children}
-
-        </aside>
-            
+        </m.aside>
+        </LazyMotion> 
             
             
 )

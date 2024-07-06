@@ -2,22 +2,16 @@ import React, { useContext, useState } from "react";
 import DatePicker from "react-datepicker";
 import { registerLocale, setDefaultLocale } from  "react-datepicker";
 import { he } from 'date-fns/locale/he';
-import { VendorData } from "contaxt/contaxt";
+import { UserContext } from "@Context/Context";
 
 registerLocale('he', he )
+
 // CSS Modules, react-datepicker-cssmodules.css
 // import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
 const Calinder = ({id,text}) => {
   const [startDate, setStartDate] = useState(new Date());
-  const [data,setData]=useContext(VendorData)
-
-  const handleChange = (e) => {
-    setData({
-        ...data,
-        [id]: startDate
-    });
-};
+  
 
   return (
     <label 
@@ -37,7 +31,7 @@ const Calinder = ({id,text}) => {
         showFullMonthYearPicker
         showTwoColumnMonthYearPicker
         closeOnScroll
-        onClickOutside={handleChange}
+       //onClickOutside={handleChange}
         
         
        />

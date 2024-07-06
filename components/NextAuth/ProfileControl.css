@@ -1,65 +1,83 @@
+
+
 .singIn{
     position:absolute;
-    left:15px;
-    top:5px;
+    left:0px;
+    top:0px;
     width:100px;
-    height:50px;
+    height:inherit;
     background:none;
     border:none;
     color:#fff;
+    
+
 }
 
 .singin:visited:{
-    color:white;
+    color:#00c0ff;
 }
 .singIn:active{
-    color:white;
+    color:#00c0ff;
 }
 .singIn:focus{
-    color:white;
+    color:#00c0ff;
+
 }
 .singIn:hover{
-    color:white;
+    color:#00c0ff;
     background:black;
     transition: ease 1s;
     border: solid 1px #fff;
+    border-radius:15px
 }
 .singIn:active{
-    color:white;
+    color:#00c0ff;
 }
-
-
 
 
 .singOutDiv{
-    position:absolute;
-    top:0;
-    left:0;
-    height:60px;
-    display:flex;
-    flex-direction:column;
+
+
 }
-.singOut{
- border:none;
- background:none;
- width:100px;
-height:50%;
-}
-.singOut:visited{}
-.singOut:active{}
-.singOut:focus{}
-.singOut:hover{}
+
+
 .singOut:active{}
 
 .profile-link{
     text-decoration:none;
-    width:100px;
-    height:50%;
-    text-align:center;
-    padding-top:5px
+    width:inherit;
+    height:inherit;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    
+
 }
+.profile-link:visited {
+    color:white
+}
+.profile-link:link{
+    color:white
+}
+.profile-linkctive {
+    color:white
+}
+.profile-link:focus {
+    color:white
+}
+.profile-link.visited:{
+    color:white;
+    
+}
+
 .profile-link:hover{
-    background:white;
+    background:black;
+    color:#00c0ff;
+    border: 1px solid white;
+    border-radius:15px;    
+    transition: 1s ease
+    
 }
 .profile-link:visited{
 

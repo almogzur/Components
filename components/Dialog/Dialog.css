@@ -1,27 +1,33 @@
 .Modal {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
     background-color: #ececec;
+    
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     align-content:enter;
+    border-radius:7px;
+
+    overflow:clip
   }
 
   .Overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 100px;
+    left: 25px;
+    right: 25px;
+    bottom: 100px;
     background-color:#404040;
+    border-radius:15px;
+
 
   }
-  .vener-x-btn{
+  .btn{
     position:absolute;
     right:5px;
     top:5px;
